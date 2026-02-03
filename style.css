@@ -1,0 +1,56 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: #fff7e6;
+}
+
+h1 {
+  margin-top: 30px;
+}
+
+.card {
+  width: 320px;
+  height: 200px;
+  margin: 40px auto;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.front {
+  background: #ffd166;
+}
+
+.back {
+  background: #06d6a0;
+  transform: rotateY(180deg);
+}
+
+.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.flipped .back {
+  transform: rotateY(360deg);
+}
+
+button {
+  padding: 10px 18px;
+  margin: 8px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
